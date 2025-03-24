@@ -28,11 +28,11 @@ struct MarkerGeneratorTests {
     // MARK: - Marker Tests
 
     @Test("Ordered list marker generation", arguments: [
-        (0, ListType.ordered(style: .decimal), "1. "),
-        (1, ListType.ordered(style: .lowerRoman), "ii. "),
-        (2, ListType.ordered(style: .upperRoman), "III. "),
-        (3, ListType.ordered(style: .lowerAlpha), "d. "),
-        (25, ListType.ordered(style: .upperAlpha), "Z. ")
+        (0, ListType.ordered(style: .decimal), "1."),
+        (1, ListType.ordered(style: .lowerRoman), "ii."),
+        (2, ListType.ordered(style: .upperRoman), "III."),
+        (3, ListType.ordered(style: .lowerAlpha), "d."),
+        (25, ListType.ordered(style: .upperAlpha), "Z.")
     ])
     func testOrderedMarker(index: Int, type: ListType, expected: String) {
         let font = UIFont.systemFont(ofSize: 17)
@@ -41,10 +41,10 @@ struct MarkerGeneratorTests {
     }
 
     @Test("Unordered list marker generation", arguments: [
-        (0, ListType.unordered(style: .disc), "• "),
-        (1, ListType.unordered(style: .circle), "◦ "),
-        (2, ListType.unordered(style: .square), "▪ "),
-        (3, ListType.unordered(style: .custom("★ ")), "★ ")
+        (0, ListType.unordered(style: .disc), "•"),
+        (1, ListType.unordered(style: .circle), "◦"),
+        (2, ListType.unordered(style: .square), "▪"),
+        (3, ListType.unordered(style: .custom("★")), "★")
     ])
     func testUnorderedMarker(index: Int, type: ListType, expected: String) {
         let font = UIFont.systemFont(ofSize: 17)

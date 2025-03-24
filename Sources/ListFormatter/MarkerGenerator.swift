@@ -14,30 +14,30 @@ internal struct MarkerGenerator {
         case .ordered(let style):
             switch style {
             case .decimal:
-                return NSAttributedString(string: "\(index + 1). ", attributes: [.font: font])
+                return NSAttributedString(string: "\(index + 1).", attributes: [.font: font])
             case .lowerRoman:
-                return NSAttributedString(string: romanNumeral(for: index + 1, isUpper: false) + ". ", attributes: [.font: font])
+                return NSAttributedString(string: romanNumeral(for: index + 1, isUpper: false) + ".", attributes: [.font: font])
             case .upperRoman:
-                return NSAttributedString(string: romanNumeral(for: index + 1, isUpper: true) + ". ", attributes: [.font: font])
+                return NSAttributedString(string: romanNumeral(for: index + 1, isUpper: true) + ".", attributes: [.font: font])
             case .lowerAlpha:
-                return NSAttributedString(string: alphaNumeral(for: index + 1, isUpper: false) + ". ", attributes: [.font: font])
+                return NSAttributedString(string: alphaNumeral(for: index + 1, isUpper: false) + ".", attributes: [.font: font])
             case .upperAlpha:
-                return NSAttributedString(string: alphaNumeral(for: index + 1, isUpper: true) + ". ", attributes: [.font: font])
+                return NSAttributedString(string: alphaNumeral(for: index + 1, isUpper: true) + ".", attributes: [.font: font])
             }
         case .unordered(let style):
             switch style {
             case .disc:
-                return NSAttributedString(string: "• ", attributes: [.font: font])
+                return NSAttributedString(string: "•", attributes: [.font: font])
             case .circle:
-                return NSAttributedString(string: "◦ ", attributes: [.font: font])
+                return NSAttributedString(string: "◦", attributes: [.font: font])
             case .square:
-                return NSAttributedString(string: "▪ ", attributes: [.font: font])
+                return NSAttributedString(string: "▪", attributes: [.font: font])
             case .custom(let symbol):
-                return NSAttributedString(string: symbol, attributes: [.font: font])
+                return NSAttributedString(string: symbol.trimmingCharacters(in: .whitespaces), attributes: [.font: font])
             }
         }
     }
-    
+
     // Converts an integer to a Roman numeral string
     static func romanNumeral(for number: Int, isUpper: Bool) -> String {
         let romanValues = [
@@ -55,7 +55,7 @@ internal struct MarkerGenerator {
         }
         return isUpper ? result : result.lowercased()
     }
-    
+
     // Converts an integer to an alphabetic string (e.g., "a", "b", "aa")
     static func alphaNumeral(for number: Int, isUpper: Bool) -> String {
         var num = number

@@ -38,7 +38,7 @@ extension NSAttributedString {
         }
 
         // Define spacing between marker and text
-        let spacing: CGFloat = 4.0
+        let spacing: CGFloat = 8.0
 
         // Configure paragraph style for list formatting
         let tabStops = [
@@ -47,7 +47,6 @@ extension NSAttributedString {
         ]
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.tabStops = tabStops
-        paragraphStyle.defaultTabInterval = 0
         paragraphStyle.firstLineHeadIndent = 0
         paragraphStyle.headIndent = maxWidth + spacing
         paragraphStyle.alignment = .left
@@ -57,7 +56,7 @@ extension NSAttributedString {
         var attributedStrings: [NSAttributedString] = []
         for (index, item) in items.enumerated() {
             let marker = MarkerGenerator.marker(for: index, type: type, font: font)
-            let itemString = marker.string + "\t" + item
+            let itemString = "\t" + marker.string + "\t" + item
             let itemAttr = NSAttributedString(string: itemString, attributes: [
                 .font: font,
                 .paragraphStyle: paragraphStyle
