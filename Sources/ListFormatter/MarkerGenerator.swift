@@ -39,7 +39,7 @@ internal struct MarkerGenerator {
     }
     
     // Converts an integer to a Roman numeral string
-    private static func romanNumeral(for number: Int, isUpper: Bool) -> String {
+    static func romanNumeral(for number: Int, isUpper: Bool) -> String {
         let romanValues = [
             (1000, "M"), (900, "CM"), (500, "D"), (400, "CD"),
             (100, "C"), (90, "XC"), (50, "L"), (40, "XL"),
@@ -57,7 +57,7 @@ internal struct MarkerGenerator {
     }
     
     // Converts an integer to an alphabetic string (e.g., "a", "b", "aa")
-    private static func alphaNumeral(for number: Int, isUpper: Bool) -> String {
+    static func alphaNumeral(for number: Int, isUpper: Bool) -> String {
         var num = number
         var result = ""
         while num > 0 {
