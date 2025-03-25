@@ -6,7 +6,7 @@
 //
 
 import Cocoa
-import ListFormatter
+import FormattedListKit
 import Combine
 
 class ViewController: NSViewController {
@@ -43,7 +43,7 @@ class ViewController: NSViewController {
     @IBAction func markerAlignDidChange(_ sender: NSSegmentedControl) {
         alignment = sender.selectedSegment == 0 ? .left : .right
     }
-    
+
     @IBAction func markerTypeDidChange(_ sender: NSSegmentedControl) {
         switch sender.selectedSegment {
         case 0: type = .ordered(style: .decimal)

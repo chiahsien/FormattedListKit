@@ -1,4 +1,4 @@
-# ListFormatter
+# FormattedListKit
 
 A Swift package for creating and formatting ordered and unordered lists as `NSAttributedStrings` with precise control over markers, alignment, and spacing.
 
@@ -19,11 +19,11 @@ A Swift package for creating and formatting ordered and unordered lists as `NSAt
 
 ### Swift Package Manager
 
-Add ListFormatter to your project using Swift Package Manager:
+Add FormattedListKit to your project using Swift Package Manager:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/chiahsien/ListFormatter.git", from: "1.0.0")
+    .package(url: "https://github.com/chiahsien/FormattedListKit.git", from: "1.0.0")
 ]
 ```
 
@@ -37,7 +37,7 @@ Check out the **Demo** project in `Example` folder.
 ### Basic Usage
 
 ```swift
-import ListFormatter
+import FormattedListKit
 import UIKit
 
 // Create a simple ordered list

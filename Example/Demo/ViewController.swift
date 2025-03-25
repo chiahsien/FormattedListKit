@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import ListFormatter
+import FormattedListKit
 import Combine
 
 final class ViewController: UIViewController {

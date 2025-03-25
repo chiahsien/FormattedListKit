@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		521742FF2D92702800FAB25C /* ListFormatter in Frameworks */ = {isa = PBXBuildFile; productRef = 521742FE2D92702800FAB25C /* ListFormatter */; };
-		521743012D92703100FAB25C /* ListFormatter in Frameworks */ = {isa = PBXBuildFile; productRef = 521743002D92703100FAB25C /* ListFormatter */; };
+		52FFD7582D92A9A900AF5FE7 /* FormattedListKit in Frameworks */ = {isa = PBXBuildFile; productRef = 52FFD7572D92A9A900AF5FE7 /* FormattedListKit */; };
+		52FFD75A2D92A9B100AF5FE7 /* FormattedListKit in Frameworks */ = {isa = PBXBuildFile; productRef = 52FFD7592D92A9B100AF5FE7 /* FormattedListKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521742FF2D92702800FAB25C /* ListFormatter in Frameworks */,
+				52FFD7582D92A9A900AF5FE7 /* FormattedListKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521743012D92703100FAB25C /* ListFormatter in Frameworks */,
+				52FFD75A2D92A9B100AF5FE7 /* FormattedListKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 			);
 			name = Demo;
 			packageProductDependencies = (
-				521742FE2D92702800FAB25C /* ListFormatter */,
+				52FFD7572D92A9A900AF5FE7 /* FormattedListKit */,
 			);
 			productName = Demo;
 			productReference = 5221A3BE2D91657A004CFDD2 /* Demo.app */;
@@ -131,7 +131,7 @@
 			);
 			name = MacDemo;
 			packageProductDependencies = (
-				521743002D92703100FAB25C /* ListFormatter */,
+				52FFD7592D92A9B100AF5FE7 /* FormattedListKit */,
 			);
 			productName = MacDemo;
 			productReference = 5245975A2D926541004486C0 /* MacDemo.app */;
@@ -165,7 +165,7 @@
 			mainGroup = 5221A3B52D91657A004CFDD2;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				521742FD2D92701C00FAB25C /* XCLocalSwiftPackageReference "../../ListFormatter" */,
+				52FFD7562D92A99C00AF5FE7 /* XCLocalSwiftPackageReference "../../FormattedListKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5221A3BF2D91657A004CFDD2 /* Products */;
@@ -483,22 +483,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		521742FD2D92701C00FAB25C /* XCLocalSwiftPackageReference "../../ListFormatter" */ = {
+		52FFD7562D92A99C00AF5FE7 /* XCLocalSwiftPackageReference "../../FormattedListKit" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../ListFormatter;
+			relativePath = ../../FormattedListKit;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		521742FE2D92702800FAB25C /* ListFormatter */ = {
+		52FFD7572D92A9A900AF5FE7 /* FormattedListKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 521742FD2D92701C00FAB25C /* XCLocalSwiftPackageReference "../../ListFormatter" */;
-			productName = ListFormatter;
+			package = 52FFD7562D92A99C00AF5FE7 /* XCLocalSwiftPackageReference "../../FormattedListKit" */;
+			productName = FormattedListKit;
 		};
-		521743002D92703100FAB25C /* ListFormatter */ = {
+		52FFD7592D92A9B100AF5FE7 /* FormattedListKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 521742FD2D92701C00FAB25C /* XCLocalSwiftPackageReference "../../ListFormatter" */;
-			productName = ListFormatter;
+			package = 52FFD7562D92A99C00AF5FE7 /* XCLocalSwiftPackageReference "../../FormattedListKit" */;
+			productName = FormattedListKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

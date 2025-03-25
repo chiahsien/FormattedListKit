@@ -1,6 +1,6 @@
 //
-//  NSAttributedString+ListFormatter.swift
-//  ListFormatter
+//  NSAttributedString+FormattedListKit.swift
+//  FormattedListKit
 //
 //  Created by Nelson on 2025/3/24.
 //
@@ -15,11 +15,11 @@ public typealias PlatformFont = NSFont
 
 extension NSAttributedString {
     /// Creates an attributed string formatted as a list with markers.
-    /// 
+    ///
     /// This method generates a list from an array of strings, applying the specified list type and font.
     /// The list markers (e.g., numbers or bullets) are aligned according to the specified marker alignment,
     /// and the text is left-aligned with proper indentation for wrapped lines.
-    /// 
+    ///
     /// - Parameters:
     ///   - items: An array of strings representing the list items.
     ///   - type: The type of list, either ordered (e.g., numbered) or unordered (e.g., bulleted).

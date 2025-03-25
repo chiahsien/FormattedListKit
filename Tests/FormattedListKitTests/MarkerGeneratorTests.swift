@@ -1,6 +1,6 @@
 import Testing
 import UIKit
-@testable import ListFormatter
+@testable import FormattedListKit
 
 struct MarkerGeneratorTests {
     // MARK: - Roman Numeral Tests
