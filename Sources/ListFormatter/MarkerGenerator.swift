@@ -8,33 +8,33 @@
 import UIKit
 
 internal struct MarkerGenerator {
-    // Generates an attributed string for a list marker based on the list type and index
-    static func marker(for index: Int, type: ListType, font: UIFont) -> NSAttributedString {
-        switch type {
-        case .ordered(let style):
-            switch style {
-            case .decimal:
-                return NSAttributedString(string: "\(index + 1).", attributes: [.font: font])
-            case .lowerRoman:
-                return NSAttributedString(string: romanNumeral(for: index + 1, isUpper: false) + ".", attributes: [.font: font])
-            case .upperRoman:
-                return NSAttributedString(string: romanNumeral(for: index + 1, isUpper: true) + ".", attributes: [.font: font])
-            case .lowerAlpha:
-                return NSAttributedString(string: alphaNumeral(for: index + 1, isUpper: false) + ".", attributes: [.font: font])
-            case .upperAlpha:
-                return NSAttributedString(string: alphaNumeral(for: index + 1, isUpper: true) + ".", attributes: [.font: font])
-            }
-        case .unordered(let style):
-            switch style {
-            case .disc:
-                return NSAttributedString(string: "•", attributes: [.font: font])
-            case .circle:
-                return NSAttributedString(string: "◦", attributes: [.font: font])
-            case .square:
-                return NSAttributedString(string: "▪", attributes: [.font: font])
-            case .custom(let symbol):
-                return NSAttributedString(string: symbol.trimmingCharacters(in: .whitespaces), attributes: [.font: font])
-            }
+    // Generates a string for a list marker based on the ordered list type and index
+    static func marker(for style: OrderedListStyle, number: Int) -> String {
+        switch style {
+        case .decimal:
+            return "\(number)."
+        case .lowerRoman:
+            return romanNumeral(for: number, isUpper: false) + "."
+        case .upperRoman:
+            return romanNumeral(for: number, isUpper: true) + "."
+        case .lowerAlpha:
+            return alphaNumeral(for: number, isUpper: false) + "."
+        case .upperAlpha:
+            return alphaNumeral(for: number, isUpper: true) + "."
+        }
+    }
+
+    // Generates a string for a list marker based on the unordered list type
+    static func marker(for style: UnorderedListStyle) -> String {
+        switch style {
+        case .disc:
+            return "•"
+        case .circle:
+            return "◦"
+        case .square:
+            return "▪"
+        case .custom(let symbol):
+            return symbol.trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
 

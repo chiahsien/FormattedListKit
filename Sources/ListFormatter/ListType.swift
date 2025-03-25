@@ -22,63 +22,12 @@ public enum UnorderedListStyle: Hashable {
     case circle
     case square
     case custom(String)
-
-    // MARK: - Hashable Conformance
-    public func hash(into hasher: inout Hasher) {
-        switch self {
-        case .disc:
-            hasher.combine("disc")
-        case .circle:
-            hasher.combine("circle")
-        case .square:
-            hasher.combine("square")
-        case .custom(let symbol):
-            hasher.combine("custom")
-            hasher.combine(symbol)
-        }
-    }
-
-    public static func ==(lhs: UnorderedListStyle, rhs: UnorderedListStyle) -> Bool {
-        switch (lhs, rhs) {
-        case (.disc, .disc), (.circle, .circle), (.square, .square):
-            return true
-        case (.custom(let lSymbol), .custom(let rSymbol)):
-            return lSymbol == rSymbol
-        default:
-            return false
-        }
-    }
 }
 
 /// Represents the type of list, either ordered or unordered, with its associated style.
-public enum ListType {
+public enum ListType: Hashable {
     case ordered(style: OrderedListStyle)
     case unordered(style: UnorderedListStyle)
-}
-
-// MARK: - Hashable Conformance
-extension ListType: Hashable {
-    public func hash(into hasher: inout Hasher) {
-        switch self {
-        case .ordered(let style):
-            hasher.combine("ordered")
-            hasher.combine(style)
-        case .unordered(let style):
-            hasher.combine("unordered")
-            hasher.combine(style)
-        }
-    }
-
-    public static func ==(lhs: ListType, rhs: ListType) -> Bool {
-        switch (lhs, rhs) {
-        case (.ordered(let lStyle), .ordered(let rStyle)):
-            return lStyle == rStyle
-        case (.unordered(let lStyle), .unordered(let rStyle)):
-            return lStyle == rStyle
-        default:
-            return false
-        }
-    }
 }
 
 // MARK: - CustomStringConvertible Conformance
@@ -100,6 +49,19 @@ extension ListType: CustomStringConvertible {
             case .square: return "Square"
             case .custom(let symbol): return "Custom (\(symbol))"
             }
+        }
+    }
+}
+
+/// Defines alignment options for list markers.
+public enum MarkerAlignment: Hashable, CustomStringConvertible {
+    case left
+    case right
+
+    public var description: String {
+        switch self {
+        case .left: return "Left"
+        case .right: return "Right"
         }
     }
 }

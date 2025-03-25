@@ -28,27 +28,25 @@ struct MarkerGeneratorTests {
     // MARK: - Marker Tests
 
     @Test("Ordered list marker generation", arguments: [
-        (0, ListType.ordered(style: .decimal), "1."),
-        (1, ListType.ordered(style: .lowerRoman), "ii."),
-        (2, ListType.ordered(style: .upperRoman), "III."),
-        (3, ListType.ordered(style: .lowerAlpha), "d."),
-        (25, ListType.ordered(style: .upperAlpha), "Z.")
+        (0, OrderedListStyle.decimal, "1."),
+        (1, OrderedListStyle.lowerRoman, "ii."),
+        (2, OrderedListStyle.upperRoman, "III."),
+        (3, OrderedListStyle.lowerAlpha, "d."),
+        (25, OrderedListStyle.upperAlpha, "Z.")
     ])
-    func testOrderedMarker(index: Int, type: ListType, expected: String) {
-        let font = UIFont.systemFont(ofSize: 17)
-        let result = MarkerGenerator.marker(for: index, type: type, font: font)
-        #expect(result.string == expected)
+    func testOrderedMarker(index: Int, style: OrderedListStyle, expected: String) {
+        let result = MarkerGenerator.marker(for: style, number: index + 1)
+        #expect(result == expected)
     }
 
     @Test("Unordered list marker generation", arguments: [
-        (0, ListType.unordered(style: .disc), "•"),
-        (1, ListType.unordered(style: .circle), "◦"),
-        (2, ListType.unordered(style: .square), "▪"),
-        (3, ListType.unordered(style: .custom("★")), "★")
+        (0, UnorderedListStyle.disc, "•"),
+        (1, UnorderedListStyle.circle, "◦"),
+        (2, UnorderedListStyle.square, "▪"),
+        (3, UnorderedListStyle.custom("★"), "★")
     ])
-    func testUnorderedMarker(index: Int, type: ListType, expected: String) {
-        let font = UIFont.systemFont(ofSize: 17)
-        let result = MarkerGenerator.marker(for: index, type: type, font: font)
-        #expect(result.string == expected)
+    func testUnorderedMarker(index: Int, style: UnorderedListStyle, expected: String) {
+        let result = MarkerGenerator.marker(for: style)
+        #expect(result == expected)
     }
 }
