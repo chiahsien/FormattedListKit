@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oUJ-5c-KJq">
+                                <rect key="frame" x="24" y="67" width="345" height="32"/>
+                                <segments>
+                                    <segment title="Left Aligned"/>
+                                    <segment title="Right Aligned"/>
+                                </segments>
+                                <connections>
+                                    <action selector="markerAlignmentDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="q8V-bi-0P1"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wi5-P1-VCf">
+                                <rect key="frame" x="24" y="106" width="345" height="32"/>
+                                <segments>
+                                    <segment title="1. 2. 3."/>
+                                    <segment title="A. B. C."/>
+                                    <segment title="i. ii. iii."/>
+                                    <segment title="▪"/>
+                                    <segment title="★"/>
+                                </segments>
+                                <connections>
+                                    <action selector="markerTypeDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="xtc-a1-n60"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOC-iM-hxh">
+                                <rect key="frame" x="24" y="145" width="345" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oUJ-5c-KJq" secondAttribute="trailing" constant="24" id="230-QQ-7fS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wi5-P1-VCf" secondAttribute="trailing" constant="24" id="5Jb-Dj-PuV"/>
+                            <constraint firstItem="YOC-iM-hxh" firstAttribute="top" secondItem="wi5-P1-VCf" secondAttribute="bottom" constant="8" id="7Jf-Bl-g6n"/>
+                            <constraint firstItem="YOC-iM-hxh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="AWW-Yi-jFV"/>
+                            <constraint firstItem="wi5-P1-VCf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="UbE-K2-yGx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YOC-iM-hxh" secondAttribute="trailing" constant="24" id="VZg-R7-Bjv"/>
+                            <constraint firstItem="oUJ-5c-KJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="d2Z-e9-ps4"/>
+                            <constraint firstItem="wi5-P1-VCf" firstAttribute="top" secondItem="oUJ-5c-KJq" secondAttribute="bottom" constant="8" id="frk-dc-obQ"/>
+                            <constraint firstItem="oUJ-5c-KJq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="kYz-UN-STL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YOC-iM-hxh" secondAttribute="bottom" id="xf7-Eu-WZX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="YOC-iM-hxh" id="AjP-59-kDE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81.679389312977094" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
