@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5221A3E82D9165AB004CFDD2 /* ListFormatter in Frameworks */ = {isa = PBXBuildFile; productRef = 5221A3E72D9165AB004CFDD2 /* ListFormatter */; };
+		521742FF2D92702800FAB25C /* ListFormatter in Frameworks */ = {isa = PBXBuildFile; productRef = 521742FE2D92702800FAB25C /* ListFormatter */; };
+		521743012D92703100FAB25C /* ListFormatter in Frameworks */ = {isa = PBXBuildFile; productRef = 521743002D92703100FAB25C /* ListFormatter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5221A3BE2D91657A004CFDD2 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5245975A2D926541004486C0 /* MacDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -33,6 +35,11 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		5245975B2D926541004486C0 /* MacDemo */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MacDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +47,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5221A3E82D9165AB004CFDD2 /* ListFormatter in Frameworks */,
+				521742FF2D92702800FAB25C /* ListFormatter in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524597572D926541004486C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521743012D92703100FAB25C /* ListFormatter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				5221A3C02D91657A004CFDD2 /* Demo */,
+				5245975B2D926541004486C0 /* MacDemo */,
+				524597692D92656C004486C0 /* Frameworks */,
 				5221A3BF2D91657A004CFDD2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,8 +76,16 @@
 			isa = PBXGroup;
 			children = (
 				5221A3BE2D91657A004CFDD2 /* Demo.app */,
+				5245975A2D926541004486C0 /* MacDemo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		524597692D92656C004486C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,10 +108,33 @@
 			);
 			name = Demo;
 			packageProductDependencies = (
-				5221A3E72D9165AB004CFDD2 /* ListFormatter */,
+				521742FE2D92702800FAB25C /* ListFormatter */,
 			);
 			productName = Demo;
 			productReference = 5221A3BE2D91657A004CFDD2 /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		524597592D926541004486C0 /* MacDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 524597662D926542004486C0 /* Build configuration list for PBXNativeTarget "MacDemo" */;
+			buildPhases = (
+				524597562D926541004486C0 /* Sources */,
+				524597572D926541004486C0 /* Frameworks */,
+				524597582D926541004486C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5245975B2D926541004486C0 /* MacDemo */,
+			);
+			name = MacDemo;
+			packageProductDependencies = (
+				521743002D92703100FAB25C /* ListFormatter */,
+			);
+			productName = MacDemo;
+			productReference = 5245975A2D926541004486C0 /* MacDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,6 +150,9 @@
 					5221A3BD2D91657A004CFDD2 = {
 						CreatedOnToolsVersion = 16.2;
 					};
+					524597592D926541004486C0 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = 5221A3B92D91657A004CFDD2 /* Build configuration list for PBXProject "Demo" */;
@@ -114,7 +165,7 @@
 			mainGroup = 5221A3B52D91657A004CFDD2;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				5221A3E62D9165AA004CFDD2 /* XCLocalSwiftPackageReference "../ListFormatter" */,
+				521742FD2D92701C00FAB25C /* XCLocalSwiftPackageReference "../../ListFormatter" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5221A3BF2D91657A004CFDD2 /* Products */;
@@ -122,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				5221A3BD2D91657A004CFDD2 /* Demo */,
+				524597592D926541004486C0 /* MacDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -134,10 +186,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		524597582D926541004486C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5221A3BA2D91657A004CFDD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524597562D926541004486C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,6 +396,60 @@
 			};
 			name = Release;
 		};
+		524597672D926542004486C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacDemo/MacDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nelson.MacDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		524597682D926542004486C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacDemo/MacDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nelson.MacDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -351,18 +471,33 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		524597662D926542004486C0 /* Build configuration list for PBXNativeTarget "MacDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524597672D926542004486C0 /* Debug */,
+				524597682D926542004486C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		5221A3E62D9165AA004CFDD2 /* XCLocalSwiftPackageReference "../ListFormatter" */ = {
+		521742FD2D92701C00FAB25C /* XCLocalSwiftPackageReference "../../ListFormatter" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../ListFormatter;
+			relativePath = ../../ListFormatter;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5221A3E72D9165AB004CFDD2 /* ListFormatter */ = {
+		521742FE2D92702800FAB25C /* ListFormatter */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 521742FD2D92701C00FAB25C /* XCLocalSwiftPackageReference "../../ListFormatter" */;
+			productName = ListFormatter;
+		};
+		521743002D92703100FAB25C /* ListFormatter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 521742FD2D92701C00FAB25C /* XCLocalSwiftPackageReference "../../ListFormatter" */;
 			productName = ListFormatter;
 		};
 /* End XCSwiftPackageProductDependency section */
