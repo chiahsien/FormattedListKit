@@ -5,7 +5,7 @@
 //  Created by Nelson on 2025/3/24.
 //
 
-import UIKit
+import Foundation
 
 internal struct MarkerGenerator {
     // Generates a string for a list marker based on the ordered list type and index

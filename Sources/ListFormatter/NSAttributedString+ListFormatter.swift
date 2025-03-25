@@ -5,7 +5,13 @@
 //  Created by Nelson on 2025/3/24.
 //
 
+#if canImport(UIKit)
 import UIKit
+public typealias PlatformFont = UIFont
+#elseif canImport(AppKit)
+import AppKit
+public typealias PlatformFont = NSFont
+#endif
 
 extension NSAttributedString {
     /// Creates an attributed string formatted as a list with markers.
@@ -24,12 +30,12 @@ extension NSAttributedString {
     public static func createList(
         for items: [String],
         type: ListType,
-        font: UIFont = .systemFont(ofSize: 17, weight: .regular),
+        font: PlatformFont = .systemFont(ofSize: 17, weight: .regular),
         markerAlignment: MarkerAlignment = .right,
         spacing: CGFloat = 8.0
     ) -> NSAttributedString {
         // Calculate the maximum width of the markers
-        let markerFont = UIFont.monospacedSystemFont(ofSize: font.pointSize, weight: .regular)
+        let markerFont = PlatformFont.monospacedSystemFont(ofSize: font.pointSize, weight: .regular)
         let markerWidth = markerWidth(for: type, itemCount: items.count, font: markerFont)
 
         // Define spacing between marker and text
@@ -83,7 +89,7 @@ extension NSAttributedString {
         return combinedAttr
     }
 
-    private static func markerWidth(for type: ListType, itemCount: Int, font: UIFont) -> CGFloat {
+    private static func markerWidth(for type: ListType, itemCount: Int, font: PlatformFont) -> CGFloat {
         // Calculate the maximum width of the markers
         switch type {
         case .ordered:

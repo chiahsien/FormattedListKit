@@ -12,7 +12,7 @@ A Swift package for creating and formatting ordered and unordered lists as `NSAt
 - [x] Seamless integration with NSAttributedString
 
 ## Requirements
-- iOS 13.0+
+- iOS 13.0+ / macOS 10.15+
 - Swift 5.5+
 
 ## Installation
@@ -28,9 +28,9 @@ dependencies: [
 ```
 
 ## Example
-Check out the **Demo** project.
+Check out the **Demo** project in `Example` folder.
 
-![](Demo.png)
+![](Example.png)
 
 ## Usage
 
