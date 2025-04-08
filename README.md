@@ -1,6 +1,6 @@
 # FormattedListKit
 
-A Swift package for creating and formatting ordered and unordered lists as `NSAttributedStrings` with precise control over markers, alignment, and spacing.
+A Swift package for creating and formatting ordered and unordered lists as `NSAttributedStrings` with precise control over markers and alignment.
 
 ## Features
 - [x] Create ordered lists with various numbering styles (decimal, roman numerals, alphabetical)
